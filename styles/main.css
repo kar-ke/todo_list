@@ -1,14 +1,15 @@
 .main-container{
     display: flex;
     justify-content: center;
-    align-items: center;
+    /* align-items: center; */
     height: 100vh;
     background: linear-gradient( to bottom, rgb(132, 0, 255), rgb(15, 15, 31));
 }
 
 .todo-container{
     width: 50%;
-    max-height: 400px;
+    margin-top: 10%;
+    height: max-content;
     padding: 30px;
     background-color: var(--c-white);
     border-radius: 20px;
@@ -51,6 +52,7 @@
     margin: 10px 0;
     position: relative;
     user-select: none;
+
 }
 
 .todo-container ul li::before {
