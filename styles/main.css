@@ -1,0 +1,88 @@
+.main-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient( to bottom, rgb(132, 0, 255), rgb(15, 15, 31));
+}
+
+.todo-container{
+    width: 50%;
+    max-height: 400px;
+    padding: 30px;
+    background-color: var(--c-white);
+    border-radius: 20px;
+}
+
+.input-wrapper {
+    display: flex;
+    padding: 10px;
+    background-color: var(--c-white-100);
+    margin: 20px 0;
+    border-radius: 50px;
+}
+
+#inputBox {
+    flex: 1;
+    padding: 5px 0 5px 20px;
+    background: transparent;
+    font-size: 12px;
+    font-family: inherit;
+    border: none;
+    outline: none;
+}
+
+#add-button {
+    width: 80px;
+    height: 30px;
+    background-color: tomato;
+    font-family: inherit;
+    color: var(--c-white);
+    border: none;
+    border-radius: 50px;
+    outline: none;
+}
+
+
+
+.todo-container ul li {
+    height: 40px;
+    padding: 5px 40px;
+    margin: 10px 0;
+    position: relative;
+    user-select: none;
+}
+
+.todo-container ul li::before {
+    width: 15px;
+    height: 15px;
+    content: "";
+    background-image: url('../assets/unchecked.png');
+    background-size: cover;
+    cursor: pointer;
+    position: absolute;
+    left: 12px;
+    top: 10px;
+}
+
+.todo-container ul li.checked {
+    text-decoration: line-through;
+    color: var(--c-grey);
+}
+
+.todo-container ul li.checked::before {
+    background-image: url('../assets/checked.png');
+}
+
+.todo-container ul li span {
+    display: flex;
+    gap: 15px;
+    position: absolute;
+    top: 6px;
+    right: 15px;
+}
+
+#edit,
+#delete {
+    font-size: 20px;
+}
